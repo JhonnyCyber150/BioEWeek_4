@@ -1,5 +1,11 @@
 # Week 4 Assigment 
 
+### LLM used for this task
+### ChatGPT 4 o mini.
+The LLM was used to address specific questions after code a basic script. First, I developed a basic version, and then I consulted ChatGPT to optimize or enhance its efficiency while ensuring the accuracy of the results. This iterative process helped improve the code and enhance its overall performance
+
+## To create this Git Repository
+
 Follow this instructions 
 
 ## Step 1
