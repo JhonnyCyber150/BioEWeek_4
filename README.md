@@ -32,17 +32,23 @@ git commit -m "added gene_finder.py"
 ```bash
 python gene_finder.py genome.fasta > output1.txt
 ```
-
+```bash
+git add output1.txt
+git commit -m "add output1.txt"
+```
 # Question 2
 ### Extracting ORFS from a fasta file including reverse 
 
 ```bash
 nano gene_finder_reverse.py
-git add gene_finder_reverse.py README.md
-git commit -m "added gene_finder_reverse.py"
 ```
 ```bash
 python gene_finder genome.fasta > output2.txt
+```
+
+```bash
+git add gene_finder_reverse.py output2.txt 
+git commit -m "added gene_finder_reverse.py"
 ```
 
 # Question 3
@@ -70,7 +76,6 @@ git commit -m "add RosalindProblem72.py"
 git add Rosalind_Problem72.fasta Output_Proteins.txt  Proteins_with_headers.txt
 git commit -m "add Result Rosalind Problem 72"
 ```
-
 
 # Question 4
 ### FInd all Open Reading Frames in the 14 bacterial genomes that you dowload from NCBI
@@ -164,7 +169,7 @@ ATGAAAGGAGGCGTGGGGGCGTTTTTGAGCGCGAGTTTAAATTTTAACCCTAAAACCCCTTTTTTGCTTTCTATTTTACT
 ```
 
 ```bash
-git add gene_finder_RBS.py
+git add gene_finder_RBS.py output_RBS.txt 
 git commit -m "added gene_finder_RBS.py"
 ```
  # Save on gitHub Repository
