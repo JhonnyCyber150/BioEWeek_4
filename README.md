@@ -84,12 +84,23 @@ ls
 
 all_open_reading_frames.txt
 ```
-New file called "all_open_reading_frames.txt" all_open_reading_frames.txt
+New file called "all_open_reading_frames.txt"
 
+A frame of the content in "all_open_reading_frames.txt"
+```bash
+>ORF_432_474_+
+ATGCGGCTCGATGAGGGCGTCAATTTCATTGATTTTTTCTAA
+>ORF_1044_1056_+
+ATGTTAAAATAG
+>ORF_1893_1920_+
+ATGGCCCAGCGATTAAAACGGATTTAG
+>ORF_1962_2007_+
+ATGGTTTCTCCAATCGGCTCAAAAAAATGGCTTTCAAAATTATAA
+...
+```
 
 # Question 5
-### Find all Open Reading Frame in the 14 genomes and discard short ORFS that are unlikely to be functional genes 
-
+### Filter by length: discard short ORFs that are unlikely to be functional genes
 (e.g., less than 100 codons, but make the length a parameter of your tool).
 
 ```bash
@@ -99,14 +110,28 @@ nano gene_finder_filtered.py
 ```bash
 python gene_finder_filtered.py all_open_reading_frames.txt -l 100 > output_filtered.fasta
 less -l
--rw-r--r-- 1 caichoj g-caichoj 759648949 Sep 29 01:26 output_filtered.fasta
+
+-rw-r--r-- 1 caichoj g-caichoj 141619281 Sep 30 20:32 output_filtered.fasta
 ```
+
+
+New output file has been created with filtered data
+
+A frame of the content in: output_filtered.fasta
+```bash
+>ORF
+ATGCAATTATGTGTCGCATTGGATTTAGAAAAAAAAGAGGACAATCTTTCTTTATTGCAAGAATTGAAGGGCTTAGATTTATGGGCTAAGGTGGGGCTTAGATCTTTTATAAGAGACGGGGCTGTTTTTTTAGATGAAATCAGAAAGATTGATGAAAATTTTAAG
+>ORF
+ATGGCAAATGCCGCACTAGAATGCGCGAAATTAGACATTGACATGCTCACCGTGCATTTAAGCAGCGCTAAAAGCGCGCTAACAGCTTTAATGCAACGCCTGAACGCTCTTAAAAAACGCCCCTTGATTATGGGCGTGAGCGCTTTAACCAGCTTTAGCGAAGAG>
+>ORF
+ATGCTCACCGTGCATTTAAGCAGCGCTAAAAGCGCGCTAACAGCTTTAATGCAACGCCTGAACGCTCTTAAAAAACGCCCCTTGATTATGGGCGTGAGCGCTTTAACCAGCTTTAGCGAAGAGGAATTTTTGATGGTGTATAACGCCCCTTTAAAAACTCAAGCG>
+....
+```
+
 ```bash
 git add gene_finder_filtered.py
 git commit -m "added gene_finder_filtered.py"
 ```
-
-New output file has been created with filtered data
 
 # Question 6
 Look for is a ribosome binding site which is usually located 4-20bp upstream of the start coding. Scan upstream of the predicted start codon
@@ -117,16 +142,34 @@ nano gene_finder_RBS.py
 
 ```bash
 python gene_finder_RBS.py output_filtered.fasta -u 20 -r AGGAGG > output_RBS.text
-
-less -l
--rw-r--r-- 1 caichoj g-caichoj     36439 Sep 29 01:49 output_RBS.text
-
+ls -l
 ```
-output_RBS.text file has been created
+A new file has been created that contains the output with RBS
+
+```bash
+-rw-r--r-- 1 caichoj g-caichoj    289059 Sep 30 20:57 output_RBS.text
+```
+
+A frame of the content in: output_RBS.text
+
+```bash
+>ORF
+>ORF
+ATGAAAACAGGAGGGAATGACCCCTACCAATTAATGGTGAATACCAAAAACACCGGCGAAGACAACCGAGTCTATTTTGGCTCACACCTCCAATCCACGCTCACTAACAAAAACGCCCTTTCTTTGGGGGTTGATGGGAGCGGAAAAAGTGAAGTGAGTTTGAAT>
+>ORF
+ATGCCAACTGATAAGGAGGGCGATTTTATTGATCCTAAAGAACAAGAAGAAAGCCTTGAAAATATTTTTTCTTCACTCAATGATTTTCAAGAAAAGACAGACGCAAACGCTCAAAAAAATGAGCAAAAAAATGAGCAAGAAGAAGAGCAAAGGCGTTTAAAAGAA>
+>ORF
+ATGAAAGGAGGCGTGGGGGCGTTTTTGAGCGCGAGTTTAAATTTTAACCCTAAAACCCCTTTTTTGCTTTCTATTTTACTCACAAGCGATGAAGAAGGGCCAGGGATTTTTGGCACTAGGCTTATGTTAGAAAAACTCAAAGAAAAAGATTTGCTGCCTCATATG>
+....
+```
 
 ```bash
 git add gene_finder_RBS.py
 git commit -m "added gene_finder_RBS.py"
 ```
+ # Save on gitHub Repository
 
+1. git remote add origin https://github.com/JhonnyCyber150/BioEWeek_4.git
+2. git branch -M main
+3. git push -u origin main
 
