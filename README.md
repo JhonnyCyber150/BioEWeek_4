@@ -1,6 +1,6 @@
 # Week 4 Assigment 
 
-Follow this instructions for this instructions
+Follow this instructions 
 
 ## Step 1
 ### Install Biopython in the terminal
@@ -30,7 +30,7 @@ git add gene_finder.py README.md
 git commit -m "added gene_finder.py"
 ```
 ```bash
-python gene_finder.py genome.fasta
+python gene_finder.py genome.fasta > output1.txt
 ```
 
 # Question 2
@@ -42,7 +42,7 @@ git add gene_finder_reverse.py README.md
 git commit -m "added gene_finder_reverse.py"
 ```
 ```bash
-python gene_finder genome.fasta
+python gene_finder genome.fasta > output2.txt
 ```
 
 # Question 3
