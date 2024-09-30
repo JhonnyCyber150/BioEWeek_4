@@ -83,6 +83,8 @@ git add Rosalind_Problem72.fasta Output_Proteins.txt  Proteins_with_headers.txt
 git commit -m "add Result Rosalind Problem 72"
 ```
 
+    Note: downloand the fasta file from Rosalind Problem 72 and upload the result 
+
 # Question 4
 ### FInd all Open Reading Frames in the 14 bacterial genomes that you dowload from NCBI
 
@@ -145,7 +147,7 @@ git commit -m "added gene_finder_filtered.py"
 ```
 
 # Question 6
-Look for is a ribosome binding site which is usually located 4-20bp upstream of the start coding. Scan upstream of the predicted start codon
+### Look for is a ribosome binding site which is usually located 4-20bp upstream of the start coding. Scan upstream of the predicted start codon
 
 ```bash
 nano gene_finder_RBS.py
