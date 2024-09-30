@@ -1,6 +1,6 @@
 # Week 4 Assigment 
 
-Follow this instructions for this instructions
+Follow this instructions 
 
 ## Step 1
 ### Install Biopython in the terminal
@@ -30,7 +30,7 @@ git add gene_finder.py README.md
 git commit -m "added gene_finder.py"
 ```
 ```bash
-python gene_finder.py genome.fasta
+python gene_finder.py genome.fasta > output1.txt
 ```
 
 # Question 2
@@ -42,12 +42,35 @@ git add gene_finder_reverse.py README.md
 git commit -m "added gene_finder_reverse.py"
 ```
 ```bash
-python gene_finder genome.fasta
+python gene_finder genome.fasta > output2.txt
 ```
 
 # Question 3
 
 ### Open Reading Frame problem on Rosalind (Problem 72)
+
+```bash
+touch RosalindProblem72.py
+nano RosalindProblem72.py
+````
+Create the code and run
+
+```bash
+python RosalindProblem72.py Rosalind_Problem72.fasta
+```
+OUTPUT:
+Output_Proteins.txt
+
+```bash
+git add RosalindProblem72.py
+git commit -m "add RosalindProblem72.py"
+```
+
+```bash
+git add Rosalind_Problem72.fasta Output_Proteins.txt  Proteins_with_headers.txt
+git commit -m "add Result Rosalind Problem 72"
+```
+
 
 # Question 4
 ### FInd all Open Reading Frames in the 14 bacterial genomes that you dowload from NCBI
