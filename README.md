@@ -1,8 +1,8 @@
-# Week 4 Assigment 
+# Week 3 and 4 Assigment: **Using Git**
 
 ### LLM used for this task
-### ChatGPT 4 o mini.
-The LLM was used to address specific questions after code a basic script. First, I developed a basic version, and then I consulted ChatGPT to optimize or enhance its efficiency while ensuring the accuracy of the results. This iterative process helped improve the code and enhance its overall performance
+### ChatGPT 4o mini.
+The LLM was used to address specific questions after code a basic script and help to overcome some problem during the pushing to the git repository. First, I developed a basic version, and then I consulted ChatGPT to optimize or enhance its efficiency while ensuring the accuracy of the results. This iterative process helped improve the code and enhance its overall performance. 
 
 ## To create this Git Repository
 
@@ -25,7 +25,7 @@ cd BioEWeek_4
 git init
 touch gene_finder.py README.md
 ```
-
+--- 
 # Question 1
 
 ### Extracting Open Readin Frames (ORFs) from FASTA file 
@@ -42,6 +42,7 @@ python gene_finder.py genome.fasta > output1.txt
 git add output1.txt
 git commit -m "add output1.txt"
 ```
+--- 
 # Question 2
 ### Extracting ORFS from a fasta file including reverse 
 
@@ -56,7 +57,7 @@ python gene_finder genome.fasta > output2.txt
 git add gene_finder_reverse.py output2.txt 
 git commit -m "added gene_finder_reverse.py"
 ```
-
+---- 
 # Question 3
 
 ### Open Reading Frame problem on Rosalind (Problem 72)
@@ -85,6 +86,7 @@ git commit -m "add Result Rosalind Problem 72"
 
     Note: downloand the fasta file from Rosalind Problem 72 and upload the result 
 
+--- 
 # Question 4
 ### FInd all Open Reading Frames in the 14 bacterial genomes that you dowload from NCBI
 
@@ -111,7 +113,7 @@ ATGGCCCAGCGATTAAAACGGATTTAG
 ATGGTTTCTCCAATCGGCTCAAAAAAATGGCTTTCAAAATTATAA
 ...
 ```
-
+--- 
 # Question 5
 ### Filter by length: discard short ORFs that are unlikely to be functional genes
 (e.g., less than 100 codons, but make the length a parameter of your tool).
@@ -145,7 +147,7 @@ ATGCTCACCGTGCATTTAAGCAGCGCTAAAAGCGCGCTAACAGCTTTAATGCAACGCCTGAACGCTCTTAAAAAACGCCC
 git add gene_finder_filtered.py
 git commit -m "added gene_finder_filtered.py"
 ```
-
+--- 
 # Question 6
 ### Look for is a ribosome binding site which is usually located 4-20bp upstream of the start coding. Scan upstream of the predicted start codon
 
@@ -180,6 +182,7 @@ ATGAAAGGAGGCGTGGGGGCGTTTTTGAGCGCGAGTTTAAATTTTAACCCTAAAACCCCTTTTTTGCTTTCTATTTTACT
 git add gene_finder_RBS.py output_RBS.txt 
 git commit -m "added gene_finder_RBS.py"
 ```
+--- 
  # Save on gitHub Repository
 
 1. git remote add origin https://github.com/JhonnyCyber150/BioEWeek_4.git
