@@ -117,6 +117,7 @@ ATGGCCCAGCGATTAAAACGGATTTAG
 ATGGTTTCTCCAATCGGCTCAAAAAAATGGCTTTCAAAATTATAA
 ...
 ```
+**Notice**: I could not load the output file since it size was more than 100 MB, and the git repository does not allow 
 --- 
 # Question 5
 ### Filter by length: discard short ORFs that are unlikely to be functional genes
