@@ -22,15 +22,19 @@ Successfully installed biopython-1.84 numpy-2.0.2
 ```bash
 mkdir BioEWeek_4
 cd BioEWeek_4
-git init
-touch gene_finder.py README.md
 ```
+
++ git init
++ git remote add origin (https://github.com/JhonnyCyber150/BioEWeek_4.git)
++ git branch -m master main
+
 --- 
 # Question 1
 
 ### Extracting Open Readin Frames (ORFs) from FASTA file 
 
 ```bash
+touch gene_finder.py README.md
 nano gene_finder.py
 git add gene_finder.py README.md
 git commit -m "added gene_finder.py"
@@ -184,8 +188,5 @@ git commit -m "added gene_finder_RBS.py"
 ```
 --- 
  # Save on gitHub Repository
-
-1. git remote add origin https://github.com/JhonnyCyber150/BioEWeek_4.git
-2. git branch -M main
-3. git push -u origin main
+* git push -u origin main
 
