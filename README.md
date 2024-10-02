@@ -131,7 +131,12 @@ output_filtered.txt
 ```
 
 
-New output file has been created with filtered data
+New output file has been created with filtered data: 45MB
+
+```
+[caichoj@login509-02-r BioEWeek_4]$ ls -lh output_filtered.txt
+-rw-r--r-- 1 caichoj g-caichoj 45M Oct  2 17:35 output_filtered.txt
+```` 
 
 ```bash
 git add gene_finder_filtered.py output_filtered.txt
