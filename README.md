@@ -97,15 +97,15 @@ git commit -m "add Result Rosalind Problem 72"
 
 ```bash
 
-find /home/caichoj/ncbi_dataset -type f -name "*GCF*.fna" -exec python gene_finder_reverse_trans3.py {} all_ORFs.tx \;
+find /home/caichoj/ncbi_dataset -type f -name "*GCF*.fna" -exec python gene_finder_reverse_trans3.py {} all_ORFs.txt \;
 ```
 
 ``` bash
-ls
+ls -l
 
-all_open_reading_frames.txt
+all_ORFs.txt
 ```
-New file called "all_open_reading_frames.txt"
+New file called "all_ORFs.txt"
 
 A frame of the content in "all_ORFs.txt"
 ```bash
@@ -116,7 +116,6 @@ MVLLLEKAF
 MCSWMAKK
 ...
 ```
-**Notice**: I could not load the output file since it size was more than 100 MB, and the git repository does not allow 
 --- 
 # Question 5
 ### Filter by length: discard short ORFs that are unlikely to be functional genes
