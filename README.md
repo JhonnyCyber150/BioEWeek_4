@@ -111,7 +111,7 @@ New file called "all_ORFs.txt"
 [caichoj@login509-02-l BioEWeek_4]$ ls -lh all_ORFs.txt
 -rw-r--r-- 1 caichoj g-caichoj 60M Oct  2 20:59 all_ORFs.txt
 ```
-A frame of the content in "all_ORFs.txt"
+
 
 --- 
 # Question 5
@@ -164,7 +164,7 @@ output_RBS.text
 
 [caichoj@login509-02-l BioEWeek_4]$ wc -l output_RBS.txt
 26 output_RBS.txt
-``
+``` 
 
 ```bash
 git add gene_finder_RBS.py output_RBS.txt 
