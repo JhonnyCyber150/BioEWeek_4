@@ -1,4 +1,10 @@
-# Week 4 Assigment 
+# Week 3 and 4 Assigment: **Using Git**
+
+### LLM used for this task
+### ChatGPT 4o mini.
+The LLM was used to address specific questions after code a basic script and help to overcome some problem during the pushing to the git repository. First, I developed a basic version, and then I consulted ChatGPT to optimize or enhance its efficiency while ensuring the accuracy of the results. This iterative process helped improve the code and enhance its overall performance. 
+
+## To create this Git Repository
 
 Follow this instructions 
 
@@ -16,26 +22,32 @@ Successfully installed biopython-1.84 numpy-2.0.2
 ```bash
 mkdir BioEWeek_4
 cd BioEWeek_4
-git init
-touch gene_finder.py README.md
 ```
 
++ git init
++ git remote add origin (https://github.com/JhonnyCyber150/BioEWeek_4.git)
++ git branch -m master main
+
+--- 
 # Question 1
 
 ### Extracting Open Readin Frames (ORFs) from FASTA file 
 
 ```bash
+touch gene_finder.py README.md
 nano gene_finder.py
 git add gene_finder.py README.md
 git commit -m "added gene_finder.py"
 ```
 ```bash
-python gene_finder.py genome.fasta > output1.txt
+python gene_finder.py ecoli.fna > output_problem1.txt
+
 ```
 ```bash
-git add output1.txt
-git commit -m "add output1.txt"
+git add output1.txt ecoli.fna
+git commit -m "output_problem1.txt"
 ```
+--- 
 # Question 2
 ### Extracting ORFS from a fasta file including reverse 
 
@@ -43,14 +55,14 @@ git commit -m "add output1.txt"
 nano gene_finder_reverse.py
 ```
 ```bash
-python gene_finder genome.fasta > output2.txt
+python gene_finder_reverse.py ecoli.fna > output_problem2.txt
 ```
 
 ```bash
-git add gene_finder_reverse.py output2.txt 
+git add gene_finder_reverse.py output_problem2.txt 
 git commit -m "added gene_finder_reverse.py"
 ```
-
+---- 
 # Question 3
 
 ### Open Reading Frame problem on Rosalind (Problem 72)
@@ -77,33 +89,34 @@ git add Rosalind_Problem72.fasta Output_Proteins.txt  Proteins_with_headers.txt
 git commit -m "add Result Rosalind Problem 72"
 ```
 
+    Note: downloand the fasta file from Rosalind Problem 72 and upload the result 
+
+--- 
 # Question 4
 ### FInd all Open Reading Frames in the 14 bacterial genomes that you dowload from NCBI
 
 ```bash
-find /home/caichoj/ncbi_dataset -type f -name "*GCF*.fna" | while read genome; do python gene_finder_reverse.py "$genome"; done > all_open_reading_frames.txt
+
+find /home/caichoj/ncbi_dataset -type f -name "*GCF*.fna" -exec python gene_finder_reverse_trans3.py {} all_ORFs.txt \;
 ```
 
 ``` bash
-ls
+ls -l
 
-all_open_reading_frames.txt
+all_ORFs.txt
 ```
-New file called "all_open_reading_frames.txt"
+New file called "all_ORFs.txt"
 
-A frame of the content in "all_open_reading_frames.txt"
+A frame of the content in "all_ORFs.txt"
 ```bash
->ORF_432_474_+
-ATGCGGCTCGATGAGGGCGTCAATTTCATTGATTTTTTCTAA
->ORF_1044_1056_+
-ATGTTAAAATAG
->ORF_1893_1920_+
-ATGGCCCAGCGATTAAAACGGATTTAG
->ORF_1962_2007_+
-ATGGTTTCTCCAATCGGCTCAAAAAAATGGCTTTCAAAATTATAA
+MLYEGILRFSSQAKRCIENEDIEKKIYYINRVTDIFTELLNILDYEKGGEVAVYLTGLYTHQIKVLTQANVENDASKIDLVLNVARGLLEAWREIHSDELA
+MGANRFKGIRAALCLDAYMAKMTRLHNNANVLCLGEKISGIGVVESILEAFFSTEFEQGRHVLRIQKLDESLKS
+MNALKS
+MVLLLEKAF
+MCSWMAKK
 ...
 ```
-
+--- 
 # Question 5
 ### Filter by length: discard short ORFs that are unlikely to be functional genes
 (e.g., less than 100 codons, but make the length a parameter of your tool).
@@ -137,9 +150,9 @@ ATGCTCACCGTGCATTTAAGCAGCGCTAAAAGCGCGCTAACAGCTTTAATGCAACGCCTGAACGCTCTTAAAAAACGCCC
 git add gene_finder_filtered.py
 git commit -m "added gene_finder_filtered.py"
 ```
-
+--- 
 # Question 6
-Look for is a ribosome binding site which is usually located 4-20bp upstream of the start coding. Scan upstream of the predicted start codon
+### Look for is a ribosome binding site which is usually located 4-20bp upstream of the start coding. Scan upstream of the predicted start codon
 
 ```bash
 nano gene_finder_RBS.py
@@ -172,9 +185,7 @@ ATGAAAGGAGGCGTGGGGGCGTTTTTGAGCGCGAGTTTAAATTTTAACCCTAAAACCCCTTTTTTGCTTTCTATTTTACT
 git add gene_finder_RBS.py output_RBS.txt 
 git commit -m "added gene_finder_RBS.py"
 ```
+--- 
  # Save on gitHub Repository
-
-1. git remote add origin https://github.com/JhonnyCyber150/BioEWeek_4.git
-2. git branch -M main
-3. git push -u origin main
+* git push -u origin main
 
