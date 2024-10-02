@@ -96,6 +96,8 @@ git commit -m "add Result Rosalind Problem 72"
 
 ```bash
 find /home/caichoj/ncbi_dataset -type f -name "*GCF*.fna" | while read genome; do python gene_finder_reverse.py "$genome"; done > all_open_reading_frames.txt
+
+find /home/caichoj/ncbi_dataset -type f -name "*GCF*.fna" -exec python gene_finder_reverse_trans3.py {} all_ORFS2.tx \;
 ```
 
 ``` bash
