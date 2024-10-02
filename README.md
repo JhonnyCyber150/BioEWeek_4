@@ -95,7 +95,6 @@ git commit -m "add Result Rosalind Problem 72"
 ### FInd all Open Reading Frames in the 14 bacterial genomes that you dowload from NCBI
 
 ```bash
-find /home/caichoj/ncbi_dataset -type f -name "*GCF*.fna" | while read genome; do python gene_finder_reverse.py "$genome"; done > all_open_reading_frames.txt
 
 find /home/caichoj/ncbi_dataset -type f -name "*GCF*.fna" -exec python gene_finder_reverse_trans3.py {} all_ORFs.tx \;
 ```
@@ -107,16 +106,13 @@ all_open_reading_frames.txt
 ```
 New file called "all_open_reading_frames.txt"
 
-A frame of the content in "all_open_reading_frames.txt"
+A frame of the content in "all_ORFs.txt"
 ```bash
->ORF_432_474_+
-ATGCGGCTCGATGAGGGCGTCAATTTCATTGATTTTTTCTAA
->ORF_1044_1056_+
-ATGTTAAAATAG
->ORF_1893_1920_+
-ATGGCCCAGCGATTAAAACGGATTTAG
->ORF_1962_2007_+
-ATGGTTTCTCCAATCGGCTCAAAAAAATGGCTTTCAAAATTATAA
+MLYEGILRFSSQAKRCIENEDIEKKIYYINRVTDIFTELLNILDYEKGGEVAVYLTGLYTHQIKVLTQANVENDASKIDLVLNVARGLLEAWREIHSDELA
+MGANRFKGIRAALCLDAYMAKMTRLHNNANVLCLGEKISGIGVVESILEAFFSTEFEQGRHVLRIQKLDESLKS
+MNALKS
+MVLLLEKAF
+MCSWMAKK
 ...
 ```
 **Notice**: I could not load the output file since it size was more than 100 MB, and the git repository does not allow 
