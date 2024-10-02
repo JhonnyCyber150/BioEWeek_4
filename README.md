@@ -55,6 +55,8 @@ nano gene_finder_reverse.py
 ```
 ```bash
 python gene_finder genome.fasta > output2.txt
+
+python gene_finder_reverse_trans3.py genome.fasta output_problem2.txt
 ```
 
 ```bash
