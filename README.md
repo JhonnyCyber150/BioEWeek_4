@@ -40,11 +40,12 @@ git add gene_finder.py README.md
 git commit -m "added gene_finder.py"
 ```
 ```bash
-python gene_finder.py genome.fasta > output1.txt
+python gene_finder.py ecoli.fna > output_problem1.txt
+
 ```
 ```bash
-git add output1.txt
-git commit -m "add output1.txt"
+git add output1.txt ecoli.fna
+git commit -m "output_problem1.txt"
 ```
 --- 
 # Question 2
@@ -54,13 +55,11 @@ git commit -m "add output1.txt"
 nano gene_finder_reverse.py
 ```
 ```bash
-python gene_finder genome.fasta > output2.txt
-
-python gene_finder_reverse_trans3.py genome.fasta output_problem2.txt
+python gene_finder_reverse.py ecoli.fna > output_problem2.txt
 ```
 
 ```bash
-git add gene_finder_reverse.py output2.txt 
+git add gene_finder_reverse.py output_problem2.txt 
 git commit -m "added gene_finder_reverse.py"
 ```
 ---- 
