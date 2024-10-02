@@ -3,7 +3,7 @@ from Bio import SeqIO
 from Bio.Seq import Seq
 
 def find_ORF(sequence):
-    ORFs = []
+    ORFs = set ()
     n = len(sequence)
     for strand, seq in [(+1, sequence), (-1, sequence.reverse_complement())]:
         for frame in range(3):
@@ -12,7 +12,7 @@ def find_ORF(sequence):
                     for end in range(start + 3, n, 3):
                         if seq[end:end+3] in ['TAA', 'TAG', 'TGA']:
                             ORF = seq[start:end+3]
-                            ORFs.append((start, end+3, strand, ORF))
+                            ORFs.add((start, end+3, strand, ORF))
                             break
     return ORFs
 
