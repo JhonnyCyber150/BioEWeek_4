@@ -107,12 +107,12 @@ all_ORFs.txt
 ```
 New file called "all_ORFs.txt"
 
-A frame of the content in "all_ORFs.txt"
-```bash
-MFLWAKKSAFLEPVSVHFHIGSQLSDLEPIIEASQKVAKIAKSLIALGIDLRFFDVGGGIGVSYENEETIKLYDYAQGILNSLQGLDLTIICEPGRSIVAESGELITQVLYEKKAQNKRFVVVDAGMNDFLRPSLYHAKHAIRVITPSKGREISPCDVVGPVCESSD 
-MLYGFYPSNGMKESCPTILKNVISLKAQIVQIRSVKKGEFIGYGEHFYTNEETLVGVLALGYADGLMRALGNRIQVAINNQLAPLIGKVCMDQCFVKLNNIQAKEGDEVILFGDKSAKANDASEIXALLNTIAYETISTLSKRLERVYI
-...
 ```
+[caichoj@login509-02-l BioEWeek_4]$ ls -lh all_ORFs.txt
+-rw-r--r-- 1 caichoj g-caichoj 60M Oct  2 20:59 all_ORFs.txt
+```
+A frame of the content in "all_ORFs.txt"
+
 --- 
 # Question 5
 ### Filter by length: discard short ORFs that are unlikely to be functional genes
@@ -158,7 +158,13 @@ A new file has been created that contains the output with RBS
 ```bash
 output_RBS.text
 ```
+```
+[caichoj@login509-02-l BioEWeek_4]$ ls -lh output_RBS.txt
+-rw-r--r-- 1 caichoj g-caichoj 7.9K Oct  2 20:35 output_RBS.txt
 
+[caichoj@login509-02-l BioEWeek_4]$ wc -l output_RBS.txt
+26 output_RBS.txt
+``
 
 ```bash
 git add gene_finder_RBS.py output_RBS.txt 
