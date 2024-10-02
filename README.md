@@ -139,7 +139,7 @@ MFLWAKKSAFLEPVSVHFHIGSQLSDLEPIIEASQKVAKIAKSLIALGIDLRFFDVGGGIGVSYENEETIKLYDYAQGIL
 ```
 
 ```bash
-git add gene_finder_filtered.py
+git add gene_finder_filtered.py output_filtered.txt
 git commit -m "added gene_finder_filtered.py"
 ```
 --- 
