@@ -110,6 +110,9 @@ New file called "all_ORFs.txt"
 ```
 [caichoj@login509-02-l BioEWeek_4]$ ls -lh all_ORFs.txt
 -rw-r--r-- 1 caichoj g-caichoj 60M Oct  2 20:59 all_ORFs.txt
+
+[caichoj@login509-02-r BioEWeek_4]$ wc -l all_ORFs.txt
+765037 all_ORFs.txt
 ```
 
 
@@ -136,6 +139,10 @@ New output file has been created with filtered data: 45MB
 ```
 [caichoj@login509-02-r BioEWeek_4]$ ls -lh output_filtered.txt
 -rw-r--r-- 1 caichoj g-caichoj 45M Oct  2 17:35 output_filtered.txt
+
+
+[caichoj@login509-02-r BioEWeek_4]$ wc -l output_filtered.txt
+162136 output_filtered.txt
 ```` 
 
 ```bash
